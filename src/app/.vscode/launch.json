@@ -1,0 +1,36 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "debug_streamlit",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "D:/Ed/Anaconda/envs/mmrag_312/Lib/site-packages/streamlit",
+            "args": [
+                "run",
+                "./streamlit_app.py"
+            ]
+        },
+        {
+            "name": "debug_FastAPI",
+            "type": "debugpy",
+            "request": "launch",
+            // "program": "D:\\Ed\\Anaconda\\envs\\mmrag_312\\python.exe",
+            // "console": "integratedTerminal",
+            // "args": ["./api/main.py"],
+            "program": "${workspaceFolder}/api/main.py",
+            "console": "integratedTerminal",
+            "args": [
+              "run",
+              "uvicorn",
+              "main:app",
+              "--reload",
+              "--host",
+              "127.0.0.1",
+              "--port",
+              "8000"
+            ],
+            "jinja": true
+          }
+    ]
+}
